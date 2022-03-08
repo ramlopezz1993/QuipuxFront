@@ -1,0 +1,26 @@
+<h2 style="text-align: center">{{prueba}}</h2>
+<div style="margin-right: 100px; margin-left: 100px">
+  <button nz-button nzType="default" (click)="crearListas()">Crear listas</button>
+  <nz-table #basicTable [nzData]="datosTabla">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Titulo</th>
+      <th>Descripcion</th>
+      <th nzRight>Acciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of basicTable.data">
+      <td>{{data.id}}</td>
+      <td>{{data.titulo}}</td>
+      <td>{{data.descripcion}}</td>
+      <td nzRight>
+        <button nz-button nzType="default" (click)="showModal(data.id)">Canciones</button>
+        <nz-divider nzType="vertical"></nz-divider>
+        <button nz-button nzType="default" (click)="eliminarLista(data.id)" nzDanger>Eliminar lista</button>
+      </td>
+    </tr>
+    </tbody>
+  </nz-table>
+</div>

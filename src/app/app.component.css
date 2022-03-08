@@ -1,0 +1,25 @@
+nz-header,
+nz-footer {
+  background: darkorange;
+  color: #fff;
+}
+
+nz-footer {
+  line-height: 1.5;
+}
+
+nz-content {
+  background: white;
+  color: #fff;
+  min-height: 120px;
+  line-height: 120px;
+}
+
+nz-layout {
+  margin-bottom: 48px;
+}
+
+nz-layout nz-layout,
+nz-layout:last-child {
+  margin: 0;
+}
